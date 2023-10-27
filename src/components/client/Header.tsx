@@ -1,4 +1,4 @@
-import { ConnectKitButton } from 'connectkit'
+import { Login } from './Login'
 import { Caisson, Deploy } from '@/server'
 
 export function Header() {
@@ -7,7 +7,7 @@ export function Header() {
       <Caisson />
       <div className="flex items-center gap-8">
         <Deploy />
-        <ConnectKitButton />
+        <Login />
       </div>
     </div>
   )

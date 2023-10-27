@@ -1,18 +1,18 @@
 'use client'
 
-import { ConnectKitProvider } from 'connectkit'
 import * as React from 'react'
-import { WagmiConfig } from 'wagmi'
-import { config } from '../wagmi'
+import { PrivyProviderWrapper } from '@/client'
+import { PrivyWagmiConnector } from '@privy-io/wagmi-connector'
+import { configureChainsConfig } from '../privyWagmi'
 
 export function Providers({ children }: { children: React.ReactNode }) {
   const [mounted, setMounted] = React.useState(false)
   React.useEffect(() => setMounted(true), [])
   return (
-    <WagmiConfig config={config}>
-      <ConnectKitProvider theme="minimal">
+    <PrivyProviderWrapper>
+      <PrivyWagmiConnector wagmiChainsConfig={configureChainsConfig}>
         {mounted && children}
-      </ConnectKitProvider>
-    </WagmiConfig>
+      </PrivyWagmiConnector>
+    </PrivyProviderWrapper>
   )
 }
