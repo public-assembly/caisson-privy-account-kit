@@ -9,13 +9,13 @@ export function Dashboard() {
   return (
     <div className="p-4 w-full">
       <div>
-        Smart account address:{' '}
+        <span className="font-semibold">Smart account address:</span>{' '}
         {smartAccountAddress
           ? smartAccountAddress
           : 'Trouble finding smart account'}
       </div>
       <div>
-        Embedded wallet:{' '}
+        <span className="font-semibold">Embedded wallet:</span>{' '}
         {user ? user.wallet?.address : 'Trouble finding connected user'}
       </div>
     </div>
