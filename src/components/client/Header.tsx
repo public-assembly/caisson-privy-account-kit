@@ -1,4 +1,4 @@
-import { Login } from './Login'
+import { Login } from '@/client'
 import { Caisson, Deploy } from '@/server'
 
 export function Header() {
