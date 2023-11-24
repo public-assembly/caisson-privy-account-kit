@@ -3,7 +3,6 @@ import { usePrivy } from '@privy-io/react-auth'
 
 export function Dashboard() {
   const { smartAccountAddress } = useAlchemyContext()
-
   const { user } = usePrivy()
 
   return (
